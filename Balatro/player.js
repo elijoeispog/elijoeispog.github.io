@@ -98,7 +98,7 @@
       if (!window.SharedArrayBuffer) {
         //alert('The Cross-Origin Policy is not configured properly');
         throw new Error('The Cross-Origin Policy is not configured properly');
-        return;
+        //return;
       }
       
       window.runLove();
