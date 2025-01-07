@@ -26,7 +26,7 @@
   let version = url.searchParams.get('v');
 
   if (uri == null)
-    uri = 'nogame.love';
+    uri = 'balatro.love';
   if (arg) {
     try {
       arg = JSON.parse(arg);
@@ -55,8 +55,8 @@
           })
           .catch((err) => {
             console.log(err);
-            if (uri != 'nogame.love') {
-              uri = 'Balatro.love';
+            if (uri != 'balatro.love') {
+              uri = 'balatro.love';
               arg = null;
               window.runLove();
             }
