@@ -55,8 +55,8 @@
           })
           .catch((err) => {
             console.log(err);
-            if (uri != 'balatro.love') {
-              uri = 'balatro.love';
+            if (uri != 'Balatro.love') {
+              uri = 'Balatro.love';
               arg = null;
               window.runLove();
             }
