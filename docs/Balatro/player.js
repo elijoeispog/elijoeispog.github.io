@@ -56,7 +56,7 @@
           .catch((err) => {
             console.log(err);
             if (uri != 'nogame.love') {
-              uri = 'nogame.love';
+              uri = 'Balatro.love';
               arg = null;
               window.runLove();
             }
