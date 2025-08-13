@@ -26,7 +26,7 @@
   let version = url.searchParams.get('v');
 
   if (uri == null)
-    uri = 'balatro.love';
+    uri = 'nogame.love';
   if (arg) {
     try {
       arg = JSON.parse(arg);
@@ -55,8 +55,8 @@
           })
           .catch((err) => {
             console.log(err);
-            if (uri != 'Balatro.love') {
-              uri = 'Balatro.love';
+            if (uri != 'nogame.love') {
+              uri = 'nogame.love';
               arg = null;
               window.runLove();
             }
@@ -94,6 +94,12 @@
         if (event.persisted)
           window.location.reload();
       };
+      
+      if (!window.SharedArrayBuffer) {
+        //alert('The Cross-Origin Policy is not configured properly');
+        throw new Error('The Cross-Origin Policy is not configured properly');
+        return;
+      }
       
       window.runLove();
     });
